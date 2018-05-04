@@ -41,7 +41,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" id="loginClose">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" id="loginCancel">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -76,7 +76,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table </h4>
-                    <button type="button" class="close" id="reserveClose">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -315,22 +315,10 @@
             }
         });
         $('#loginButton').click(function(){
-            $('#loginModal').modal('show');
-        });
-        $('#loginClose').click(function(){
-            $('#loginModal').modal('hide');
-        });
-        $('#loginCancel').click(function(){
-            $('#loginModal').modal('hide');
+            $('#loginModal').modal();
         });
         $('#reserveButton').click(function(){
-            $('#reserveModal').modal('show');
-        });
-        $('#reserveClose').click(function(){
-            $('#reserveModal').modal('hide');
-        });
-        $('#reserveCancel').click(function(){
-            $('#reserveModal').modal('hide');
+            $('#reserveModal').modal();
         });
     </script>
 </body>
